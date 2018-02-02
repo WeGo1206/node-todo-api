@@ -1,3 +1,4 @@
+require('./config/config');
 const _ = require('lodash');
 const {ObjectID} = require('mongodb');
 const express = require('express');
@@ -90,7 +91,7 @@ app.patch('/todos/:id', (req, res) => {
     }
 
     res.send({todo});
-    
+
     }).catch((e) => {
       res.status(400).send();
     })
